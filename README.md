@@ -16,6 +16,16 @@ A hands-on approach, follow us for weekly content.
 <br>
 </details>
 
+<details>
+<summary>Session 02</summary>
+<br>
+  What is an Instruction? <br>
+  What is an Instruction Set? <br>
+  What is an Instruction Set Architecture? <br>
+  Watch this: <a href="https://www.youtube.com/watch?v=z86tduEf4AY">2. Moving on with Instruction Set</a>
+  
+<br>
+</details>
 
 ## Resources
 
