@@ -1,35 +1,154 @@
+<h1 align="center"> VLSI 101 MIPS32-Core: An Open-Source Processor </h1>
 
-# VLSI 101
+<h3 align="center"> Welcome to a guided, week-by-week process to make your own processor! 🦾 </h3>
 
-An introduction course into front-end VLSI domain through design and implementation of a MIPS processor in Verilog HDL.
+<center><img src="./media/MIPS32-Logo.jpeg" width="600"></center><br>
 
-A hands-on approach, follow us for weekly content.
+
+This project guides you in creating a **M**icroprocessor without **I**nterlocked **P**ipelined **S**tages (MIPS), which is based on the **R**educed **I**nstruction **S**et **C**omputer (RISC) philosophy.
+
+For essential reading, please check the resources file for the book: *Computer Organization and Design: The Hardware Software Interface by Patterson and Hennessy*.
+
+---
+
+## 🛠️ Our Open-Source Toolchain
+
+We will use the following open-source tools to realize our processor. You won't need huge, expensive EDA tools to get started on the basic RTL flow.
+
+| **Logo** | **Tool** | **Role in Project** |
+| :--: | :--- | :--- |
+| 🐉 | **Icarus Verilog** | Our trusty Verilog simulator for running initial tests and debugging our RTL code. |
+| 🌊 | **GTKWave** | The go-to wave viewer to visualize simulation outputs and dive deep into the processor's signals. |
+| 🐍 | **Cocotb** | For powerful, Python-based verification. This lets us write complex testbenches to hunt down tricky bugs. |
+| 🛠️ | **Yosys** | The synthesis powerhouse. Yosys transforms our human-readable Verilog into a netlist of logic gates. |
+| 🛰️ | **Skywater 130nm PDK** | Google's open Process Design Kit. This is the "recipe book" for creating a real, physical chip layout. |
+
+---
+
+## 🎓 Introductory Sessions
+
+Here are our introductory sessions, held in collaboration with Tech Club SSN during the previous academic year:
 
 <details>
-<summary>Session 01</summary>
+<summary><b>Session 01: Getting Started</b></summary>
 <br>
-  New to the world of VLSI? <br>
-  New to the world of Computer Arch and Organization? <br>
-  Want to know what a processor is? <br>
-  Watch this: <a href="https://youtu.be/AupIYlntl3M?si=rqSnJue8oC1PJcy8">1. Getting Started with MIPS</a>
-  
-<br>
+
+* New to the world of VLSI?
+* New to Computer Architecture and Organization?
+* Want to know what a processor is?
+
+**Watch this: [1. Getting Started with MIPS](https://youtu.be/AupIYlntl3M?si=rqSnJue8oC1PJcy8)**
+
 </details>
 
 <details>
-<summary>Session 02</summary>
+<summary><b>Session 02: The Instruction Set</b></summary>
 <br>
-  What is an Instruction? <br>
-  What is an Instruction Set? <br>
-  What is an Instruction Set Architecture? <br>
-  Watch this: <a href="https://www.youtube.com/watch?v=z86tduEf4AY">2. Moving on with Instruction Set</a>
-  
-<br>
+
+* What is an Instruction?
+* What is an Instruction Set?
+* What is an Instruction Set Architecture (ISA)?
+
+**Watch this: [2. Moving on with Instruction Set](https://www.youtube.com/watch?v=z86tduEf4AY)**
+
 </details>
 
-## Resources
+---
 
- - [Digital Circuits](https://learn.circuitverse.org/docs/binary-algebra/)
- - [All About Circuits](https://www.allaboutcircuits.com/)
- - [Chipverify Verilog Tutorials](https://www.chipverify.com/verilog/verilog-tutorial)
- - [Verilog Practice](https://hdlbits.01xz.net/wiki/Main_Page)
+## 🗓️ Week 1: Diving into MIPS Assembly
+
+Before designing a processor, learning its assembly language provides great clarity for the design process later on.
+
+### Tasks for this week:
+
+1.  **Explore available MIPS simulators online.** Here are a few to get you started:
+    * [MIPS Assembler - CS Field Guide](https://www.csfieldguide.org.nz/en/interactives/mips-assembler/)
+    * [MIPS Simulator - CS Field Guide](https://www.csfieldguide.org.nz/en/interactives/mips-simulator/)
+    * [NTU MIPS 101](https://www3.ntu.edu.sg/home/smitha/fyp_gerald/rDatapath.html)
+    * *Please do not hesitate to explore more!*
+
+2.  **Install [MARS](https://dpetersanderson.github.io/index.html)**, a lightweight IDE for programming in MIPS assembly, in line with Patterson and Hennessy's book.
+
+3.  **Ensure you have the latest Java version running** (OpenJDK version 21.0.8 works fine for us).
+
+4.  **Write the following MIPS assembly programs** by referring to the Patterson book (using the base instruction set):
+    * Program to compute permutation.
+    * Program to compute Greatest Common Factor (GCF).
+
+5.  **Share your doubts and results** in our [MOSphere WhatsApp Group](https://chat.whatsapp.com/Clk8CyQMsujF3XALakg2Ik). Please include your name and a link to your GitHub repo when sharing results.
+
+### Working with MARS IDE:
+
+1.  **Start up window** you shall find yourself in
+
+| Linux terminal or WSL | Start up window |
+|:---------------:|:---------------:
+| <img src="./media/terminal-mars.png" width="400"> | <img src="./media/startup-mars.png" width="400"> |
+| *Run this command to run your java executable* | *Startup page you'll come across* |
+
+2.  **Create a new file or open an asm file** check the options under file to choose it accordingly
+
+| File options |
+|:---------------:|
+| <img src="./media/file-mars.png" width="800"> |
+| *File options you'll come across* |
+
+3. **Here's a demo program** you can use
+
+> Sum of first 100 natural numbers
+
+```asm
+    addi $a0, $a0, 100           // Initiating register $a0 to 100
+    add $t0, $zero, $zero        // Initiating register $t0 to 0 for accumulating the sum
+    LOOP: add $t0, $t0, $a0      // Looping and accumulating while decrementing $a0 by 1 until $a0 becomes 0
+    addi $a0, $a0, -1
+    bne $a0, $zero, LOOP
+```
+
+| Demo program |
+|:---------------:|
+| <img src="./media/demo-program-mars.png" width="800"> |
+| *Here's a demo program we used originally to test the datapath of R and I-type instructions* |
+
+4. **Killer visualization** with MIPS X-Ray tool option
+<br> <br> ***What is MIPS X-Ray you ask?***
+ It's an interactive UI-element where you can visualize the datapath signal flow, disassembled code as well as binary codes for us to visualize and understand. You can run instruction by  instruction using the UI and observe the change in register and memory content.
+
+| Tools option |
+|:---------------:|
+| <img src="./media/tools-option-mars.png" width="800"> |
+| *Under the tools option select the MIPS X-Ray option* |
+
+5. **MIPS X-Ray** UI will open up with the following dialog box, click on the top left icon to assemble the mips assembly code once you load or create an assembly file
+
+| MIPS X-Ray |
+|:---------------:|
+| <img src="./media/UI-MARS-Xray-mars.png" width="800"> |
+| *MIPS X-Ray gives you an interactive UI as follows* |
+
+6. **Run the assembly code** instruction by instruction by clicking the icon next to the assemble icon, every click with execute one instruction
+
+| Running assemble code |
+|:---------------:|
+| <img src="./media/run-mars.png" width="800"> |
+| *Click the green play button on the left top for executing your program instruction by instruction* |
+
+7. **Register File and Control Unit** can be lively viewed to observe the signal flow by clicking on them in the UI element accordingly
+
+| Register file | Control unit |
+|:---------------:|:---------------:
+| <img src="./media/register-file-mars.png" width="400"> | <img src="./media/control-unit-mars.png" width="400"> |
+| *Register file dialog box showing signal flow* | *Control unit dialog box showing signal flow* |
+
+
+---
+
+## 🙏 Acknowledgements & Learning Resources
+
+* [Digital Circuits - CircuitVerse](https://learn.circuitverse.org/docs/binary-algebra/)
+* [All About Circuits](https://www.allaboutcircuits.com/)
+* [Chipverify Verilog Tutorials](https://www.chipverify.com/verilog/verilog-tutorial)
+* [Verilog Practice - HDLBits](https://hdlbits.01xz.net/wiki/Main_Page)
+
+---
+
