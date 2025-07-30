@@ -2,7 +2,7 @@
 
 <h3 align="center"> Welcome to a guided, week-by-week process to make your own processor! 🦾 </h3>
 
-<center><img src="./media/MIPS32-Logo.jpeg" width="600"></center><br>
+<div align="center"><img src="./media/MIPS32-Logo.jpeg" width="600"></div><br>
 
 
 This project guides you in creating a **M**icroprocessor without **I**nterlocked **P**ipelined **S**tages (MIPS), which is based on the **R**educed **I**nstruction **S**et **C**omputer (RISC) philosophy.
