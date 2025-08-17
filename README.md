@@ -17,11 +17,12 @@ We will use the following open-source tools to realize our processor. You won't 
 
 | **Logo** | **Tool** | **Role in Project** |
 | :--: | :--- | :--- |
-| 🐉 | **Icarus Verilog** | Our trusty Verilog simulator for running initial tests and debugging our RTL code. |
-| 🌊 | **GTKWave** | The go-to wave viewer to visualize simulation outputs and dive deep into the processor's signals. |
-| 🐍 | **Cocotb** | For powerful, Python-based verification. This lets us write complex testbenches to hunt down tricky bugs. |
-| 🛠️ | **Yosys** | The synthesis powerhouse. Yosys transforms our human-readable Verilog into a netlist of logic gates. |
-| 🛰️ | **Skywater 130nm PDK** | Google's open Process Design Kit. This is the "recipe book" for creating a real, physical chip layout. |
+| <a href="https://github.com/steveicarus/iverilog"><img src="./media/icarus-verilog-logo.png" width="60" alt="Icarus Verilog"></a> | **Icarus Verilog** | Our trusty Verilog simulator for running initial tests and debugging our RTL code. |
+| <a href="https://github.com/gtkwave/gtkwave"><img src="./media/gtkwave-logo.jpeg" width="50" alt="GTKWave"></a> | **GTKWave** | The go-to wave viewer to visualize simulation outputs and dive deep into the processor's signals. |
+| <a href="https://github.com/cocotb/cocotb"><img src="./media/cocotb-logo.jpeg" width="50" alt="Cocotb"></a> | **Cocotb** | For powerful, Python-based verification. This lets us write complex testbenches to hunt down tricky bugs. |
+| <a href="https://github.com/YosysHQ/yosys"><img src="./media/yosys-logo.webp" width="50" alt="Yosys"></a> | **Yosys** | The synthesis powerhouse. Yosys transforms our human-readable Verilog into a netlist of logic gates. |
+| <a href="https://github.com/google/skywater-pdk"><img src="./media/skywater-pdk-logo.webp" width="50" alt="SkyWater PDK"></a> | **Skywater 130nm PDK** | Google's open Process Design Kit. This is the "recipe book" for creating a real, physical chip layout. |
+
 
 ---
 
@@ -55,7 +56,10 @@ Here are our introductory sessions, held in collaboration with Tech Club SSN dur
 
 ---
 
-## 🗓️ Week 1: Diving into MIPS Assembly
+<details>
+<summary><b> 🗓️ Week 01</b></summary>
+
+## Diving into MIPS Assembly
 
 Before designing a processor, learning its assembly language provides great clarity for the design process later on.
 
@@ -140,6 +144,9 @@ Before designing a processor, learning its assembly language provides great clar
 | <img src="./media/register-file-mars.png" width="400"> | <img src="./media/control-unit-mars.png" width="400"> |
 | *Register file dialog box showing signal flow* | *Control unit dialog box showing signal flow* |
 
+8. **Check For Solutions:** [Week 01](https://youtu.be/ZpVqjjkXr40)
+
+</details>
 
 ---
 
@@ -149,6 +156,7 @@ Before designing a processor, learning its assembly language provides great clar
 * [All About Circuits](https://www.allaboutcircuits.com/)
 * [Chipverify Verilog Tutorials](https://www.chipverify.com/verilog/verilog-tutorial)
 * [Verilog Practice - HDLBits](https://hdlbits.01xz.net/wiki/Main_Page)
+* [MARS IDE Documentation](https://dpetersanderson.github.io/index.html)
 
 ---
 
