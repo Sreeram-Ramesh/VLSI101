@@ -145,6 +145,7 @@ Before designing a processor, learning its assembly language provides great clar
 | *Register file dialog box showing signal flow* | *Control unit dialog box showing signal flow* |
 
 8. **Check For Solutions:** [Week 01](https://youtu.be/ZpVqjjkXr40)
+<br> Got a better solution to share? Check our mips_assembly directory for existing solution, pull a PR and challenge our solution ;)
 
 </details>
 
