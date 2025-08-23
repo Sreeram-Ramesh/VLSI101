@@ -59,11 +59,11 @@ Here are our introductory sessions, held in collaboration with Tech Club SSN dur
 <details>
 <summary><b> 🗓️ Week 01</b></summary>
 
-## Diving into MIPS Assembly
+## Diving Into MIPS Assembly
 
 Before designing a processor, learning its assembly language provides great clarity for the design process later on.
 
-### Tasks for this week:
+### Tasks For This Week:
 
 1.  **Explore available MIPS simulators online.** Here are a few to get you started:
     * [MIPS Assembler - CS Field Guide](https://www.csfieldguide.org.nz/en/interactives/mips-assembler/)
@@ -81,7 +81,9 @@ Before designing a processor, learning its assembly language provides great clar
 
 5.  **Share your doubts and results** in our [MOSphere WhatsApp Group](https://chat.whatsapp.com/Clk8CyQMsujF3XALakg2Ik). Please include your name and a link to your GitHub repo when sharing results.
 
-### Working with MARS IDE:
+---
+
+### Working With MARS IDE:
 
 1.  **Start up window** you shall find yourself in
 
@@ -145,7 +147,74 @@ Before designing a processor, learning its assembly language provides great clar
 | *Register file dialog box showing signal flow* | *Control unit dialog box showing signal flow* |
 
 8. **Check For Solutions:** [Week 01](https://youtu.be/ZpVqjjkXr40)
-<br> Got a better solution to share? Check our mips_assembly directory for existing solution, pull a PR and challenge our solution ;)
+<br> Got a better solution to share? Check our mips_assembly directory for existing solution, pull a PR and challenge our solution
+
+</details>
+
+---
+
+<details>
+<summary><b> 🗓️ Week 02</b></summary>
+
+## Getting Started With The Datapath: R-Type
+
+Hope y'all had fun exploring the Assembly Language for the MIPS architecture. Now it is time for us to start with th processor design.
+
+Now, this week's task focuses on building the **hardware design** that can execute these instructions — starting with **R-type instructions**.
+
+
+<div align="center"><img src="./media/design-datapath-meme.jpeg" width="400"><br><strong><em> * cough, cough based on true events :'')</em></strong></div>
+
+### Tasks For This Week:
+
+1. **Install Icarus Verilog**, Icarus Verilog is a popular open-source to compile HDLs like verilog, you can either get the latest version from their [official documentation](https://steveicarus.github.io/iverilog/usage/installation.html) or get a pre-packaged binary distribution like the one maintained by ubuntu, mentioned in this [medium blog](https://emkboruett.medium.com/installing-icarus-verilog-and-gtkwave-on-ubuntu-for-verilog-simulation-d6d31eee2096)
+
+2. **Install GTKWave**, GTKWave is an open-source tool to visualize analog and digital signals, you can either refer to their [official documentation](https://gtkwave.github.io/gtkwave/) or install and set it up based on the [medium blog](https://emkboruett.medium.com/installing-icarus-verilog-and-gtkwave-on-ubuntu-for-verilog-simulation-d6d31eee2096) again
+
+3. **Simple Implementation** of the MIPS processor, refer to **pgs. 251 to 258**, start by building the verilog design files for all the base components for R-Type instruction execution. Read through **pgs. 118, 119, 120 and 121** to understand instruction types 
+
+4. **Individually test** each of the components by writing a testbench and looking out for all possible testcases
+
+5. **Create** a result-< design >.txt for all the designs of components where the text file consists of all the logs printed by the testbench using **$monitor** or save the waveform file using the gtkwave as a pdf for each design
+
+---
+
+### MIPS Core Elements:
+
+To execute instructions, a MIPS processor uses a combination of key datapath components:
+
+1. **Program Counter (PC)**  
+- Holds the address of the current instruction.  
+- Increments by 4 to move to the next instruction.
+
+2. **Instruction Memory**  
+- Stores the program instructions.  
+- Fetches instruction using the address in the PC.
+
+3. **Register File**  
+- 32 registers, each 32 bits wide.  
+- Provides 2 read ports and 1 write port for operand access.  
+- Registers are identified by numbers from 0 to 31.
+
+4. **ALU (Arithmetic Logic Unit)**  
+- Performs all arithmetic and logical operations (e.g., `add`, `sub`, `and`).  
+- Inputs: Two operands and a control signal.  
+- Outputs: Result and a `Zero` flag (used in branching).
+
+5. **ALU Control Unit**  
+- Converts function code and ALUOp to a specific ALU control signal.  
+- Ensures the ALU performs the correct operation for each instruction.
+
+6. **Main Control Unit**  
+- Takes opcode as input and generates control signals for the datapath.  
+- Determines how data flows through the processor based on instruction type.
+
+7. **Data Memory**  
+- Used for `lw`, `sw`, etc.  
+
+8. **Top Module (Datapath Integration)**  
+- Connects all components to form the MIPS datapath.  
+- Simulates instruction execution by coordinating control and data flow.
 
 </details>
 
