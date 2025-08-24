@@ -171,7 +171,7 @@ Now, this week's task focuses on building the **hardware design** that can execu
 
 2. **Install GTKWave**, GTKWave is an open-source tool to visualize analog and digital signals, you can either refer to their [official documentation](https://gtkwave.github.io/gtkwave/) or install and set it up based on the [medium blog](https://emkboruett.medium.com/installing-icarus-verilog-and-gtkwave-on-ubuntu-for-verilog-simulation-d6d31eee2096) again
 
-3. **Simple Implementation** of the MIPS processor, refer to **pgs. 251 to 258**, start by building the verilog design files for all the base components for R-Type instruction execution. Read through **pgs. 118, 119, 120 and 121** to understand instruction types 
+3. **Simple Implementation** of the MIPS processor, refer to **pgs. 251 to 258** from **Computer Organization book by Patterson and Hennessy** present in resources, start by building the verilog design files for all the base components for R-Type instruction execution. Read through **pgs. 118, 119, 120 and 121** to understand instruction types 
 
 4. **Individually test** each of the components by writing a testbench and looking out for all possible testcases
 
