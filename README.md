@@ -176,7 +176,9 @@ Now, this week's task focuses on building the **hardware design** that can execu
 4. **Individually test** each of the components by writing a testbench and looking out for all possible testcases
 
 5. **Create** a result-< design >.txt for all the designs of components where the text file consists of all the logs printed by the testbench using **$monitor** or save the waveform file using the gtkwave as a pdf for each design
-
+   
+6. **Check For Solutions:** [Week 02](https://youtu.be/G76seRPtboA)
+<br> Got a better solution to share? Check our mips_assembly directory for existing solution, pull a PR and challenge our solution
 ---
 
 ### MIPS Core Elements:
