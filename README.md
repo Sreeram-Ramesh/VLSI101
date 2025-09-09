@@ -231,8 +231,6 @@ Hope y'all are doing good till now, we are to get started with desiging our R-Ty
 
 <div align="center"><img src="./media/charlie-explaining-meme.png" width="400"><br><strong><em> based on live events</em></strong></div>
 
-</details>
-
 ### Tasks For This Week:
 
 1. **Understanding Machine Language Decoding** for R-Type instructions. Refer pgs. 118, 119, 120 from the Comp Org book for this exercise following this.
@@ -253,6 +251,8 @@ jalr $t0
 4. **Read** through the simple impementation given in the Comp Arch book pgs. 251 - 258 to understand the datapath, relate it with the machine decoding path, where your brain acted as the datapath and the control unit.
 
 5. **Write a testbench** to test is for all R-Type instructions of the simple implementation, and upload a result-top-module-rtype.txt with your simulation results.
+
+</details>
 
 ---
 
