@@ -235,7 +235,7 @@ Hope y'all are doing good till now, we are to get started with desiging our R-Ty
 
 1. **Understanding Machine Language Decoding** for R-Type instructions. Refer pgs. 118, 119, 120 from the Comp Org book for this exercise following this.
 
-2. **Deccode the following** MIPS Assembly instructions into it's machine code:
+2. **Decode the following** MIPS Assembly instructions into it's machine code:
 
 ```asm
 add $t1, $t2, $t3
