@@ -252,6 +252,9 @@ jalr $t0
 
 5. **Write a testbench** to test is for all R-Type instructions of the simple implementation, and upload a `result-top-module-rtype.txt` with your simulation results.
 
+6. **Check For Solutions:** [Week 03](https://youtu.be/IeH0B9tB0Mw?si=9iAmFr2DKa39_5il)
+<br> Got a better solution to share? Check our mips_assembly directory for existing solution, pull a PR and challenge our solution
+
 </details>
 
 ---
